@@ -21,7 +21,9 @@ npm init -y
 npm install cypress --save-dev
 Abre la interfaz de Cypress:
 
-npx cypress open
+npx cypress open![test](https://github.com/user-attachments/assets/c84e874d-3082-48db-8274-061af94ab556)
+![PIN](https://github.com/user-attachments/assets/b935e8c1-19ee-49b3-9591-0d61c20584f5)
+
 
 🛠 Requisitos
 Node.js instalado
