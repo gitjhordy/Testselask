@@ -1,0 +1,35 @@
+//archivo auth_embarque.cy.js
+describe('Flujo de autenticación y validación de embarque', () => {
+  const pin = '5569';
+
+  beforeEach(() => {
+    cy.visit('https://www.selaski.com/public/reports/shared?token=cdeadfd7a31da5257e1d5f7af80e21ec5f0d89ki');
+
+    // Autenticación por PIN
+    pin.split('').forEach((digit, index) => {
+      cy.get(`#digit${index + 1}`).type(digit);
+    });
+    cy.contains('Ingresar').click();
+    // Esperar a que cargue correctamente
+    cy.contains('Filtros', { timeout: 10000 }).should('be.visible');
+  });
+
+  it('Debe buscar y validar embarque KSIO34588-01', () => {
+    // Abrir filtros
+    cy.contains('Filtros').click();
+
+    // Hacer clic en "Seleccionar"
+    cy.contains('Seleccionar').click();
+
+    // Seleccionar "Embarque"
+    cy.contains('Embarque').click();
+
+    // Escribir el código en el input
+    cy.get('input[placeholder="Escribe aquí tu búsqueda"]')
+      .should('exist')
+      .type('KSIO34588-01{enter}', { force: true });
+
+    // Esperar a que se aplique el filtro y se muestre el embarque
+    cy.contains('KSIO34588-01', { timeout: 10000 }).should('be.visible');
+  });
+});
