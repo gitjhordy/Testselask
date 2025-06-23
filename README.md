@@ -30,3 +30,8 @@ Cypress (se instala con los pasos anteriores)
 
 Acceso a la URL del sistema:
 https://www.selaski.com/public/reports/shared?token=cdeadfd7a31da5257e1d5f7af80e21ec5f0d89ki
+
+
+##evidencias
+![Image](https://github.com/user-attachments/assets/8f4fa2a9-a99b-4c02-88ff-5ecf39b903f3)
+![Image](https://github.com/user-attachments/assets/74b114cf-73a3-4150-9a40-e850fb12aa06)
