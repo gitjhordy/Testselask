@@ -29,4 +29,4 @@ Node.js instalado
 Cypress (se instala con los pasos anteriores)
 
 Acceso a la URL del sistema:
-
+https://www.selaski.com/public/reports/shared?token=cdeadfd7a31da5257e1d5f7af80e21ec5f0d89ki
